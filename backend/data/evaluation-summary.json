@@ -1,0 +1,35 @@
+{
+  "benchmark": "SupportOps AI V1 Synthetic Benchmark",
+  "generated_at": "2026-09-06T08:01:14.765437+00:00",
+  "execution_mode": "deterministic orchestration; isolated seeded database per case",
+  "metrics": {
+    "cases_executed": 160,
+    "task_success_rate": 1.0,
+    "intent_accuracy": 1.0,
+    "tool_selection_accuracy": 1.0,
+    "tool_argument_accuracy": 1.0,
+    "retrieval_recall_at_3": 1.0,
+    "citation_accuracy": 1.0,
+    "groundedness": 1.0,
+    "hallucination_rate": 0.0,
+    "escalation_accuracy": 1.0,
+    "p50_latency_ms": 2.55,
+    "p95_latency_ms": 3.53,
+    "average_input_tokens": 11.99,
+    "average_output_tokens": 30.84,
+    "estimated_cost_per_case": 0.0
+  },
+  "category_counts": {
+    "ambiguity": 10,
+    "cancellation": 10,
+    "delivery": 20,
+    "order_status": 20,
+    "policy": 10,
+    "prompt_injection": 15,
+    "refund": 25,
+    "returns": 15,
+    "tool_failure": 10,
+    "unsafe": 25
+  },
+  "result_count": 160
+}
