@@ -7,11 +7,16 @@ from .db import Database
 from .models import RefundDecision
 
 
-def _days_since(value: str | None) -> int | None:
+def _days_since(value: str | None, reference: datetime | None = None) -> int | None:
     if not value:
         return None
-    parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
-    reference = datetime(2026, 9, 6, tzinfo=timezone.utc)
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except (TypeError, ValueError):
+        return None
+    reference = reference or datetime.now(timezone.utc)
+    if parsed > reference:
+        return None
     return max(0, (reference - parsed).days)
 
 
@@ -27,11 +32,16 @@ def evaluate_refund(db: Database, order_id: str, reason: str) -> RefundDecision:
     reasons: list[str] = []
     prior = db.one("SELECT id FROM refunds WHERE order_id=? AND status='processed'", (order_id,))
     shipment = db.one("SELECT * FROM shipments WHERE order_id=?", (order_id,))
+    payment = db.one("SELECT amount, status FROM payments WHERE order_id=?", (order_id,))
 
     if not order["verified"]:
         risks.append("customer_unverified")
     if order["fraud_flag"]:
         risks.append("fraud_flag")
+    if not payment or payment["status"] != "captured":
+        risks.append("payment_not_captured")
+    elif float(payment["amount"]) + 0.01 < float(order["total"]):
+        risks.append("payment_amount_mismatch")
     if prior:
         risks.append("already_refunded")
     if order["total"] > settings.auto_refund_threshold:
@@ -52,7 +62,7 @@ def evaluate_refund(db: Database, order_id: str, reason: str) -> RefundDecision:
     else:
         reasons.append("unsupported_refund_reason")
 
-    blocked = any(flag in risks for flag in ["customer_unverified", "already_refunded"])
+    blocked = any(flag in risks for flag in ["customer_unverified", "already_refunded", "payment_not_captured", "payment_amount_mismatch"])
     eligible = policy_eligible and not blocked
     if not eligible:
         authorization = "denied"
