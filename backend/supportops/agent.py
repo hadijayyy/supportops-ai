@@ -39,7 +39,7 @@ def _looks_like_policy_question(message: str) -> bool:
         return False
     if any(term in normalized for term in POLICY_ACTION_TERMS):
         return False
-    return "?" in message or normalized.startswith(("what", "can i", "am i", "how", "is ", "are ", "tell me", "explain"))
+    return "?" in message or normalized.startswith(("what", "can i", "am i", "how", "is ", "are ", "tell me", "please explain", "explain"))
 
 
 def _policy_category(message: str) -> str | None:
@@ -141,7 +141,7 @@ class SupportAgent:
             risks.append("prompt_injection")
 
         # Policy questions must win over action words and optional model output.
-        if _looks_like_policy_question(raw_message):
+        if _looks_like_policy_question(raw_message) and not risks:
             intent: Intent = "policy_question"
             confidence = 0.96
         elif self.classifier and not risks:
@@ -167,7 +167,7 @@ class SupportAgent:
             elif any(word in message for word in ["where is", "track", "status", "shipment", "shipped"]):
                 intent = "order_status"
                 confidence = 0.96
-            elif "policy" in message and not any(term in message for term in POLICY_ACTION_TERMS):
+            elif "policy" in message and "prompt_injection" not in risks and not any(term in message for term in POLICY_ACTION_TERMS):
                 intent = "policy_question"
                 confidence = 0.92
             else:
