@@ -1,6 +1,6 @@
 {
   "benchmark": "SupportOps AI V1 Synthetic Benchmark",
-  "generated_at": "2026-09-06T08:01:14.765437+00:00",
+  "generated_at": "2026-09-06T09:35:15.945074+00:00",
   "execution_mode": "deterministic orchestration; isolated seeded database per case",
   "metrics": {
     "cases_executed": 160,
@@ -13,10 +13,10 @@
     "groundedness": 1.0,
     "hallucination_rate": 0.0,
     "escalation_accuracy": 1.0,
-    "p50_latency_ms": 2.55,
-    "p95_latency_ms": 3.53,
+    "p50_latency_ms": 2.54,
+    "p95_latency_ms": 3.84,
     "average_input_tokens": 11.99,
-    "average_output_tokens": 30.84,
+    "average_output_tokens": 34.91,
     "estimated_cost_per_case": 0.0
   },
   "category_counts": {
