@@ -1,6 +1,6 @@
 {
   "benchmark": "SupportOps AI V1 Synthetic Benchmark",
-  "generated_at": "2026-09-06T08:01:14.765437+00:00",
+  "generated_at": "2026-09-06T09:35:15.945074+00:00",
   "execution_mode": "deterministic orchestration; isolated seeded database per case",
   "metrics": {
     "cases_executed": 160,
@@ -13,10 +13,10 @@
     "groundedness": 1.0,
     "hallucination_rate": 0.0,
     "escalation_accuracy": 1.0,
-    "p50_latency_ms": 2.55,
-    "p95_latency_ms": 3.53,
+    "p50_latency_ms": 2.54,
+    "p95_latency_ms": 3.84,
     "average_input_tokens": 11.99,
-    "average_output_tokens": 30.84,
+    "average_output_tokens": 34.91,
     "estimated_cost_per_case": 0.0
   },
   "category_counts": {
@@ -50,9 +50,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.06,
+      "latency_ms": 3.39,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -73,9 +73,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.67,
+      "latency_ms": 1.97,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -98,7 +98,7 @@
       "escalation_correct": true,
       "latency_ms": 1.68,
       "input_tokens": 12,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -119,9 +119,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.61,
+      "latency_ms": 2.05,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -142,9 +142,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.63,
+      "latency_ms": 1.7,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -165,9 +165,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.63,
+      "latency_ms": 1.78,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -188,9 +188,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.59,
+      "latency_ms": 2.05,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -211,9 +211,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.54,
+      "latency_ms": 1.9,
       "input_tokens": 12,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -234,9 +234,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.74,
+      "latency_ms": 1.9,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -257,9 +257,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.71,
+      "latency_ms": 1.75,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -280,9 +280,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.58,
+      "latency_ms": 2.05,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -303,9 +303,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.56,
+      "latency_ms": 1.92,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -326,9 +326,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.77,
+      "latency_ms": 1.7,
       "input_tokens": 12,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -349,9 +349,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.75,
+      "latency_ms": 1.74,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -372,9 +372,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.94,
+      "latency_ms": 1.89,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -395,9 +395,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.73,
+      "latency_ms": 1.77,
       "input_tokens": 12,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -418,9 +418,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.06,
+      "latency_ms": 1.63,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -441,9 +441,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.73,
+      "latency_ms": 1.63,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -464,9 +464,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.57,
+      "latency_ms": 2.08,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -487,9 +487,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.76,
+      "latency_ms": 1.97,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -510,9 +510,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.59,
+      "latency_ms": 1.6,
       "input_tokens": 12,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -533,9 +533,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.92,
+      "latency_ms": 1.63,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -556,9 +556,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.62,
+      "latency_ms": 1.63,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -581,7 +581,7 @@
       "escalation_correct": true,
       "latency_ms": 1.66,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -602,9 +602,9 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.76,
+      "latency_ms": 1.94,
       "input_tokens": 10,
-      "output_tokens": 41,
+      "output_tokens": 67,
       "estimated_cost": 0.0
     },
     {
@@ -633,7 +633,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.1,
+      "latency_ms": 1.92,
       "input_tokens": 6,
       "output_tokens": 31,
       "estimated_cost": 0.0
@@ -664,7 +664,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.81,
+      "latency_ms": 2.12,
       "input_tokens": 5,
       "output_tokens": 31,
       "estimated_cost": 0.0
@@ -695,7 +695,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.77,
+      "latency_ms": 1.87,
       "input_tokens": 10,
       "output_tokens": 31,
       "estimated_cost": 0.0
@@ -757,7 +757,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.84,
+      "latency_ms": 1.86,
       "input_tokens": 6,
       "output_tokens": 31,
       "estimated_cost": 0.0
@@ -788,7 +788,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.01,
+      "latency_ms": 1.82,
       "input_tokens": 5,
       "output_tokens": 31,
       "estimated_cost": 0.0
@@ -819,7 +819,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.8,
+      "latency_ms": 2.07,
       "input_tokens": 10,
       "output_tokens": 31,
       "estimated_cost": 0.0
@@ -850,7 +850,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.79,
+      "latency_ms": 2.33,
       "input_tokens": 6,
       "output_tokens": 31,
       "estimated_cost": 0.0
@@ -881,7 +881,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.84,
+      "latency_ms": 1.91,
       "input_tokens": 6,
       "output_tokens": 31,
       "estimated_cost": 0.0
@@ -912,7 +912,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.88,
+      "latency_ms": 2.0,
       "input_tokens": 5,
       "output_tokens": 31,
       "estimated_cost": 0.0
@@ -943,7 +943,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.81,
+      "latency_ms": 2.16,
       "input_tokens": 10,
       "output_tokens": 31,
       "estimated_cost": 0.0
@@ -974,7 +974,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.79,
+      "latency_ms": 1.96,
       "input_tokens": 6,
       "output_tokens": 31,
       "estimated_cost": 0.0
@@ -1005,7 +1005,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.81,
+      "latency_ms": 1.89,
       "input_tokens": 6,
       "output_tokens": 31,
       "estimated_cost": 0.0
@@ -1036,7 +1036,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.99,
+      "latency_ms": 1.84,
       "input_tokens": 5,
       "output_tokens": 31,
       "estimated_cost": 0.0
@@ -1067,7 +1067,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.85,
+      "latency_ms": 2.12,
       "input_tokens": 10,
       "output_tokens": 31,
       "estimated_cost": 0.0
@@ -1098,7 +1098,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.82,
+      "latency_ms": 2.14,
       "input_tokens": 6,
       "output_tokens": 31,
       "estimated_cost": 0.0
@@ -1129,7 +1129,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.83,
+      "latency_ms": 1.92,
       "input_tokens": 6,
       "output_tokens": 31,
       "estimated_cost": 0.0
@@ -1160,7 +1160,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.0,
+      "latency_ms": 2.25,
       "input_tokens": 5,
       "output_tokens": 31,
       "estimated_cost": 0.0
@@ -1191,7 +1191,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.08,
+      "latency_ms": 2.12,
       "input_tokens": 10,
       "output_tokens": 31,
       "estimated_cost": 0.0
@@ -1222,7 +1222,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.79,
+      "latency_ms": 1.87,
       "input_tokens": 6,
       "output_tokens": 31,
       "estimated_cost": 0.0
@@ -1257,7 +1257,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.44,
+      "latency_ms": 4.05,
       "input_tokens": 12,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1292,7 +1292,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.18,
+      "latency_ms": 3.94,
       "input_tokens": 12,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1327,7 +1327,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.32,
+      "latency_ms": 4.21,
       "input_tokens": 14,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1362,7 +1362,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.2,
+      "latency_ms": 3.89,
       "input_tokens": 12,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1397,7 +1397,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.31,
+      "latency_ms": 3.72,
       "input_tokens": 12,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1432,7 +1432,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.27,
+      "latency_ms": 3.58,
       "input_tokens": 14,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1467,7 +1467,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.31,
+      "latency_ms": 3.53,
       "input_tokens": 12,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1502,7 +1502,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.13,
+      "latency_ms": 3.56,
       "input_tokens": 12,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1537,7 +1537,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.17,
+      "latency_ms": 3.59,
       "input_tokens": 14,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1572,7 +1572,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.25,
+      "latency_ms": 3.61,
       "input_tokens": 12,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1607,7 +1607,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.24,
+      "latency_ms": 3.65,
       "input_tokens": 12,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1642,7 +1642,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.29,
+      "latency_ms": 5.1,
       "input_tokens": 14,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1677,7 +1677,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.13,
+      "latency_ms": 3.81,
       "input_tokens": 12,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1712,7 +1712,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.35,
+      "latency_ms": 3.72,
       "input_tokens": 12,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1747,7 +1747,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.2,
+      "latency_ms": 3.77,
       "input_tokens": 14,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1782,7 +1782,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.13,
+      "latency_ms": 3.62,
       "input_tokens": 12,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1817,7 +1817,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.14,
+      "latency_ms": 3.59,
       "input_tokens": 12,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1852,7 +1852,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.61,
+      "latency_ms": 3.64,
       "input_tokens": 14,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1887,7 +1887,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.25,
+      "latency_ms": 3.56,
       "input_tokens": 12,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1922,7 +1922,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.13,
+      "latency_ms": 3.79,
       "input_tokens": 12,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1957,7 +1957,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.12,
+      "latency_ms": 3.71,
       "input_tokens": 14,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -1992,7 +1992,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.59,
+      "latency_ms": 3.63,
       "input_tokens": 12,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -2027,7 +2027,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.15,
+      "latency_ms": 3.67,
       "input_tokens": 12,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -2062,7 +2062,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.13,
+      "latency_ms": 3.57,
       "input_tokens": 14,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -2097,7 +2097,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.13,
+      "latency_ms": 4.32,
       "input_tokens": 12,
       "output_tokens": 32,
       "estimated_cost": 0.0
@@ -2132,7 +2132,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.24,
+      "latency_ms": 3.08,
       "input_tokens": 15,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -2167,7 +2167,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.81,
+      "latency_ms": 3.11,
       "input_tokens": 15,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -2202,7 +2202,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.84,
+      "latency_ms": 3.15,
       "input_tokens": 15,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -2237,7 +2237,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.06,
+      "latency_ms": 3.04,
       "input_tokens": 15,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -2272,7 +2272,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.94,
+      "latency_ms": 3.0,
       "input_tokens": 15,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -2307,7 +2307,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.91,
+      "latency_ms": 3.15,
       "input_tokens": 15,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -2342,7 +2342,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.05,
+      "latency_ms": 3.01,
       "input_tokens": 15,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -2377,7 +2377,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.96,
+      "latency_ms": 3.01,
       "input_tokens": 15,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -2412,7 +2412,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.49,
+      "latency_ms": 3.13,
       "input_tokens": 15,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -2447,7 +2447,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.08,
+      "latency_ms": 2.93,
       "input_tokens": 15,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -2482,7 +2482,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.95,
+      "latency_ms": 2.92,
       "input_tokens": 15,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -2517,7 +2517,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.87,
+      "latency_ms": 3.05,
       "input_tokens": 15,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -2552,7 +2552,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.89,
+      "latency_ms": 3.49,
       "input_tokens": 15,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -2587,7 +2587,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.15,
+      "latency_ms": 3.01,
       "input_tokens": 15,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -2622,7 +2622,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.39,
+      "latency_ms": 3.0,
       "input_tokens": 15,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -2651,7 +2651,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.27,
+      "latency_ms": 1.99,
       "input_tokens": 18,
       "output_tokens": 24,
       "estimated_cost": 0.0
@@ -2680,7 +2680,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.0,
+      "latency_ms": 1.89,
       "input_tokens": 18,
       "output_tokens": 24,
       "estimated_cost": 0.0
@@ -2709,7 +2709,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.02,
+      "latency_ms": 1.93,
       "input_tokens": 18,
       "output_tokens": 24,
       "estimated_cost": 0.0
@@ -2738,7 +2738,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.13,
+      "latency_ms": 1.94,
       "input_tokens": 18,
       "output_tokens": 24,
       "estimated_cost": 0.0
@@ -2767,7 +2767,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.93,
+      "latency_ms": 1.99,
       "input_tokens": 18,
       "output_tokens": 24,
       "estimated_cost": 0.0
@@ -2796,7 +2796,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.95,
+      "latency_ms": 1.99,
       "input_tokens": 18,
       "output_tokens": 24,
       "estimated_cost": 0.0
@@ -2825,7 +2825,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.98,
+      "latency_ms": 2.02,
       "input_tokens": 18,
       "output_tokens": 24,
       "estimated_cost": 0.0
@@ -2854,7 +2854,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.99,
+      "latency_ms": 1.98,
       "input_tokens": 18,
       "output_tokens": 24,
       "estimated_cost": 0.0
@@ -2883,7 +2883,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.01,
+      "latency_ms": 1.94,
       "input_tokens": 18,
       "output_tokens": 24,
       "estimated_cost": 0.0
@@ -2912,7 +2912,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.21,
+      "latency_ms": 2.0,
       "input_tokens": 18,
       "output_tokens": 24,
       "estimated_cost": 0.0
@@ -2941,7 +2941,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.03,
+      "latency_ms": 2.01,
       "input_tokens": 18,
       "output_tokens": 24,
       "estimated_cost": 0.0
@@ -2970,7 +2970,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.03,
+      "latency_ms": 2.06,
       "input_tokens": 18,
       "output_tokens": 24,
       "estimated_cost": 0.0
@@ -2999,7 +2999,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.25,
+      "latency_ms": 1.98,
       "input_tokens": 18,
       "output_tokens": 24,
       "estimated_cost": 0.0
@@ -3028,7 +3028,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.22,
+      "latency_ms": 2.03,
       "input_tokens": 18,
       "output_tokens": 24,
       "estimated_cost": 0.0
@@ -3057,7 +3057,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.12,
+      "latency_ms": 2.02,
       "input_tokens": 18,
       "output_tokens": 24,
       "estimated_cost": 0.0
@@ -3094,7 +3094,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.4,
+      "latency_ms": 3.73,
       "input_tokens": 23,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3131,7 +3131,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.54,
+      "latency_ms": 3.78,
       "input_tokens": 15,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3168,7 +3168,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.91,
+      "latency_ms": 3.7,
       "input_tokens": 15,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3205,7 +3205,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.46,
+      "latency_ms": 3.7,
       "input_tokens": 23,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3242,7 +3242,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.4,
+      "latency_ms": 3.89,
       "input_tokens": 15,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3279,7 +3279,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.37,
+      "latency_ms": 3.7,
       "input_tokens": 15,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3316,7 +3316,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.41,
+      "latency_ms": 3.76,
       "input_tokens": 23,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3353,7 +3353,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.32,
+      "latency_ms": 3.69,
       "input_tokens": 15,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3390,7 +3390,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.26,
+      "latency_ms": 3.7,
       "input_tokens": 15,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3427,7 +3427,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.46,
+      "latency_ms": 3.7,
       "input_tokens": 23,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3464,7 +3464,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.29,
+      "latency_ms": 3.68,
       "input_tokens": 15,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3501,7 +3501,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.29,
+      "latency_ms": 3.71,
       "input_tokens": 15,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3538,7 +3538,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.95,
+      "latency_ms": 3.73,
       "input_tokens": 23,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3575,7 +3575,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.33,
+      "latency_ms": 3.64,
       "input_tokens": 15,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3612,7 +3612,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.21,
+      "latency_ms": 3.71,
       "input_tokens": 15,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3649,7 +3649,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.38,
+      "latency_ms": 3.71,
       "input_tokens": 23,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3686,7 +3686,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.29,
+      "latency_ms": 4.62,
       "input_tokens": 15,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3723,7 +3723,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.45,
+      "latency_ms": 3.83,
       "input_tokens": 15,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3760,7 +3760,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.44,
+      "latency_ms": 3.81,
       "input_tokens": 23,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3797,7 +3797,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.43,
+      "latency_ms": 3.84,
       "input_tokens": 15,
       "output_tokens": 33,
       "estimated_cost": 0.0
@@ -3828,7 +3828,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.71,
+      "latency_ms": 3.07,
       "input_tokens": 12,
       "output_tokens": 12,
       "estimated_cost": 0.0
@@ -3859,7 +3859,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.47,
+      "latency_ms": 2.84,
       "input_tokens": 12,
       "output_tokens": 12,
       "estimated_cost": 0.0
@@ -3890,7 +3890,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.39,
+      "latency_ms": 2.68,
       "input_tokens": 12,
       "output_tokens": 12,
       "estimated_cost": 0.0
@@ -3921,7 +3921,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.37,
+      "latency_ms": 2.55,
       "input_tokens": 12,
       "output_tokens": 12,
       "estimated_cost": 0.0
@@ -3952,7 +3952,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.53,
+      "latency_ms": 2.79,
       "input_tokens": 12,
       "output_tokens": 12,
       "estimated_cost": 0.0
@@ -3983,7 +3983,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.58,
+      "latency_ms": 2.5,
       "input_tokens": 12,
       "output_tokens": 12,
       "estimated_cost": 0.0
@@ -4014,7 +4014,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.4,
+      "latency_ms": 2.61,
       "input_tokens": 12,
       "output_tokens": 12,
       "estimated_cost": 0.0
@@ -4045,7 +4045,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.44,
+      "latency_ms": 2.48,
       "input_tokens": 12,
       "output_tokens": 12,
       "estimated_cost": 0.0
@@ -4076,7 +4076,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.68,
+      "latency_ms": 2.5,
       "input_tokens": 12,
       "output_tokens": 12,
       "estimated_cost": 0.0
@@ -4107,7 +4107,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.79,
+      "latency_ms": 2.54,
       "input_tokens": 12,
       "output_tokens": 12,
       "estimated_cost": 0.0
@@ -4136,7 +4136,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.18,
+      "latency_ms": 1.98,
       "input_tokens": 6,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4165,7 +4165,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.05,
+      "latency_ms": 2.0,
       "input_tokens": 9,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4194,7 +4194,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.21,
+      "latency_ms": 1.91,
       "input_tokens": 5,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4223,7 +4223,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.11,
+      "latency_ms": 2.32,
       "input_tokens": 6,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4252,7 +4252,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.96,
+      "latency_ms": 1.92,
       "input_tokens": 9,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4281,7 +4281,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.27,
+      "latency_ms": 1.96,
       "input_tokens": 5,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4310,7 +4310,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.83,
+      "latency_ms": 1.9,
       "input_tokens": 6,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4339,7 +4339,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.13,
+      "latency_ms": 1.89,
       "input_tokens": 9,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4368,7 +4368,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.02,
+      "latency_ms": 1.93,
       "input_tokens": 5,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4397,7 +4397,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 1.9,
+      "latency_ms": 2.08,
       "input_tokens": 6,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4430,7 +4430,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.3,
+      "latency_ms": 2.19,
       "input_tokens": 6,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4463,7 +4463,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 9.44,
+      "latency_ms": 3.7,
       "input_tokens": 6,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4496,7 +4496,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.21,
+      "latency_ms": 2.44,
       "input_tokens": 6,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4529,7 +4529,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.06,
+      "latency_ms": 2.19,
       "input_tokens": 6,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4562,7 +4562,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.28,
+      "latency_ms": 2.1,
       "input_tokens": 6,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4595,7 +4595,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.62,
+      "latency_ms": 2.68,
       "input_tokens": 6,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4628,7 +4628,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.09,
+      "latency_ms": 2.37,
       "input_tokens": 6,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4661,7 +4661,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.95,
+      "latency_ms": 2.33,
       "input_tokens": 6,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4694,7 +4694,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.2,
+      "latency_ms": 2.61,
       "input_tokens": 6,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4727,7 +4727,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.28,
+      "latency_ms": 2.24,
       "input_tokens": 6,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4762,7 +4762,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.13,
+      "latency_ms": 3.57,
       "input_tokens": 11,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4797,7 +4797,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.53,
+      "latency_ms": 3.79,
       "input_tokens": 11,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4832,7 +4832,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.02,
+      "latency_ms": 3.57,
       "input_tokens": 11,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4867,7 +4867,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.94,
+      "latency_ms": 3.57,
       "input_tokens": 11,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4902,7 +4902,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.75,
+      "latency_ms": 3.28,
       "input_tokens": 11,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4937,7 +4937,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.1,
+      "latency_ms": 3.07,
       "input_tokens": 11,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -4972,7 +4972,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.95,
+      "latency_ms": 3.35,
       "input_tokens": 11,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -5007,7 +5007,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.12,
+      "latency_ms": 3.07,
       "input_tokens": 11,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -5042,7 +5042,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 2.97,
+      "latency_ms": 3.15,
       "input_tokens": 11,
       "output_tokens": 30,
       "estimated_cost": 0.0
@@ -5077,7 +5077,7 @@
       "grounded": true,
       "hallucinated": false,
       "escalation_correct": true,
-      "latency_ms": 3.04,
+      "latency_ms": 2.99,
       "input_tokens": 11,
       "output_tokens": 30,
       "estimated_cost": 0.0
