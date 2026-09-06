@@ -30,6 +30,15 @@ def test_threshold_and_fraud_require_human(tmp_path):
     assert "fraud_flag" in fraud.data["risk_flags"]
 
 
+def test_refund_requires_captured_payment(tmp_path):
+    tools = registry(tmp_path)
+    tools.db.execute("UPDATE payments SET status='voided' WHERE order_id=?", ("ORD-20551",))
+    result = tools.execute("check_refund_eligibility", {"order_id": "ORD-20551", "reason": "damaged"})
+    assert result.ok
+    assert result.data["eligible"] is False
+    assert "payment_not_captured" in result.data["risk_flags"]
+
+
 def test_duplicate_unknown_and_invalid_tools_fail_safely(tmp_path):
     tools = registry(tmp_path)
     existing = tools.execute("check_refund_eligibility", {"order_id": "ORD-40992", "reason": "return"})
