@@ -50,6 +50,14 @@ def test_demo_4_prompt_injection_cannot_override_rules(tmp_path):
     assert "issue_refund" not in [event.tool for event in result.trace if event.tool]
 
 
+def test_policy_question_with_order_id_never_executes_refund(tmp_path):
+    result = run(tmp_path, "CUS-0002", "What is the refund policy for order ORD-20551?")
+    assert result.intent == "policy_question"
+    assert result.outcome == "resolved"
+    assert "POL-REF-042" in [source.document_id for source in result.evidence]
+    assert "issue_refund" not in [event.tool for event in result.trace if event.tool]
+
+
 def test_demo_5_lost_package_multistep_refund(tmp_path):
     result = run(tmp_path, "CUS-0004", "My package ORD-30991 hasn't arrived. Check what happened and refund it if it's considered lost.")
     tools = [event.tool for event in result.trace if event.tool]
