@@ -54,7 +54,7 @@ def _policy_category(message: str) -> str | None:
         return "payments"
     if any(term in normalized for term in ("shipping", "delivery", "tracking", "shipment")):
         return "shipping"
-    if any(term in normalized for term in ("return", "returns")):
+    if any(term in normalized for term in ("return", "unused")):
         return "returns"
     if any(term in normalized for term in ("refund", "refunded")):
         return "refunds"
@@ -134,47 +134,45 @@ class SupportAgent:
         )
 
     def _understand_intent(self, state: AgentState) -> dict[str, Any]:
-        raw_message = state["request"].message
-        message = raw_message.lower()
+        message = state["request"].message.lower()
         risks = list(state["risk_flags"])
         if any(pattern in message for pattern in INJECTION_PATTERNS):
             risks.append("prompt_injection")
-
-        # Policy questions must win over action words and optional model output.
-        if _looks_like_policy_question(raw_message) and not risks:
-            intent: Intent = "policy_question"
-            confidence = 0.96
+        if _looks_like_policy_question(message) and not risks:
+            intent, confidence = "policy_question", 0.98
         elif self.classifier and not risks:
             try:
-                classified = self.classifier.classify(raw_message)
+                classified = self.classifier.classify(state["request"].message)
                 intent, confidence = classified.intent, classified.confidence
             except Exception:
                 risks.append("model_fallback")
                 intent, confidence = "unknown", 0.0
         else:
             intent, confidence = "unknown", 0.0
-
-        if intent == "unknown":
-            if ("lost" in message or "hasn't arrived" in message or "has not arrived" in message or "late" in message) and "refund" in message:
-                intent = "lost_package_refund"
-                confidence = 0.97
-            elif "refund" in message or "damaged" in message or "broken" in message:
-                intent = "refund"
-                confidence = 0.96
-            elif "cancel" in message:
-                intent = "cancellation"
-                confidence = 0.95
-            elif any(word in message for word in ["where is", "track", "status", "shipment", "shipped"]):
-                intent = "order_status"
-                confidence = 0.96
-            elif "policy" in message and "prompt_injection" not in risks and not any(term in message for term in POLICY_ACTION_TERMS):
-                intent = "policy_question"
-                confidence = 0.92
-            else:
-                intent = "unknown"
-                confidence = 0.35
-
-        match = ORDER_PATTERN.search(raw_message)
+        if intent != "unknown":
+            pass
+        elif "policy" in message and "prompt_injection" not in risks and not any(term in message for term in POLICY_ACTION_TERMS):
+            intent = "policy_question"
+            confidence = 0.92
+        elif ("lost" in message or "hasn't arrived" in message or "has not arrived" in message or "late" in message) and "refund" in message:
+            intent: Intent = "lost_package_refund"
+            confidence = 0.97
+        elif "refund" in message or "damaged" in message or "broken" in message:
+            intent = "refund"
+            confidence = 0.96
+        elif "cancel" in message:
+            intent = "cancellation"
+            confidence = 0.95
+        elif any(word in message for word in ["where is", "track", "status", "shipment", "shipped"]):
+            intent = "order_status"
+            confidence = 0.96
+        elif any(word in message for word in ["policy", "can i return", "return an item", "how many days"]):
+            intent = "policy_question"
+            confidence = 0.92
+        else:
+            intent = "unknown"
+            confidence = 0.35
+        match = ORDER_PATTERN.search(state["request"].message)
         trace = state["trace"] + [TraceEvent(step="intent", status="completed", label="Intent classified", detail=f"{intent} · {confidence:.0%} confidence")]
         return {"intent": intent, "confidence": confidence, "order_id": match.group(0).upper() if match else None, "risk_flags": risks, "trace": trace}
 
@@ -192,13 +190,8 @@ class SupportAgent:
             result = self.tools.execute("get_customer", {"customer_id": state["request"].customer_id})
             trace = self._record_tool(trace, result, "Customer identified" if result.ok else "Customer could not be identified", {"customer_id": state["request"].customer_id})
             if result.ok:
-                customer = {
-                    "id": result.data["id"],
-                    "name": result.data["name"],
-                    "verified": bool(result.data.get("verified")),
-                    "tier": result.data.get("tier"),
-                }
-                if not customer["verified"]:
+                customer = {key: result.data.get(key) for key in ("id", "name", "verified", "tier")}
+                if not result.data.get("verified"):
                     return {
                         "trace": trace,
                         "customer": customer,
@@ -222,15 +215,9 @@ class SupportAgent:
     def _retrieve_policy(self, state: AgentState) -> dict[str, Any]:
         if state.get("escalation_reason") or state["intent"] == "order_status":
             return {}
-        category = (
-            _policy_category(state["request"].message)
-            if state["intent"] == "policy_question"
-            else {
-                "refund": "damaged_items",
-                "lost_package_refund": "lost_packages",
-                "cancellation": "cancellations",
-            }.get(state["intent"])
-        )
+        category = _policy_category(state["request"].message) if state["intent"] == "policy_question" else {
+            "refund": "damaged_items", "lost_package_refund": "lost_packages", "cancellation": "cancellations",
+        }.get(state["intent"])
         evidence = self.rag.search(state["request"].message, category=category, k=settings.retrieval_k)
         if not evidence or evidence[0].score < 0.2:
             return {"evidence": evidence, "escalation_reason": "No reliable policy evidence was available", "risk_flags": state["risk_flags"] + ["policy_unavailable"]}
