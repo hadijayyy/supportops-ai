@@ -25,13 +25,11 @@ def _score(case: dict[str, Any], result, valid_policies: set[str]) -> dict[str, 
     expected = case["expected"]
     tools = [event.tool for event in result.trace if event.tool]
     expected_order = expected.get("order_id")
-    expected_customer = case.get("customer_id")
-    expected_reason = "lost" if expected.get("intent") == "lost_package_refund" else "damaged" if expected.get("intent") == "refund" else None
+    expected_reason = "lost" if expected["intent"] == "lost_package_refund" else "damaged" if expected["intent"] == "refund" else None
     tool_events = {event.tool: event for event in result.trace if event.tool}
-
     required_inputs: dict[str, dict[str, Any]] = {}
-    if expected_customer:
-        required_inputs["get_customer"] = {"customer_id": expected_customer}
+    if case.get("customer_id"):
+        required_inputs["get_customer"] = {"customer_id": case["customer_id"]}
     if expected_order:
         for tool_name in ("get_order", "get_shipment", "calculate_refund", "cancel_order"):
             required_inputs[tool_name] = {"order_id": expected_order}
@@ -39,8 +37,7 @@ def _score(case: dict[str, Any], result, valid_policies: set[str]) -> dict[str, 
             required_inputs["check_refund_eligibility"] = {"order_id": expected_order, "reason": expected_reason}
             required_inputs["issue_refund"] = {"order_id": expected_order, "reason": expected_reason}
     if expected.get("escalation"):
-        required_inputs["escalate_to_human"] = {"customer_id": expected_customer, "order_id": expected_order}
-
+        required_inputs["escalate_to_human"] = {"customer_id": case.get("customer_id"), "order_id": expected_order}
     arguments_correct = True
     for tool_name in expected["tools"]:
         event = tool_events.get(tool_name)
@@ -51,20 +48,13 @@ def _score(case: dict[str, Any], result, valid_policies: set[str]) -> dict[str, 
         if any(event.input.get(key) != value for key, value in expected_inputs.items()):
             arguments_correct = False
             break
-
     evidence_ids = [item.document_id for item in result.evidence]
     expected_policy = expected.get("policy")
     retrieval_hit = expected_policy in evidence_ids if expected_policy else None
-    citation_correct = (
-        all(value in valid_policies for value in evidence_ids)
-        and (not expected_policy or expected_policy in evidence_ids)
-    ) if evidence_ids or expected_policy else None
+    citation_correct = (all(value in valid_policies for value in evidence_ids) and (not expected_policy or expected_policy in evidence_ids)) if evidence_ids or expected_policy else None
     response_orders = set(re.findall(r"ORD-\d{5}", result.response))
     response_policies = set(re.findall(r"POL-[A-Z]+-\d+", result.response))
-    hallucinated = bool(
-        (response_orders - ({expected_order} if expected_order else set()))
-        or (response_policies - set(evidence_ids))
-    )
+    hallucinated = bool((response_orders - ({expected_order} if expected_order else set())) or (response_policies - set(evidence_ids)))
     grounded = (
         (result.outcome == "refunded" and bool(result.action_result and result.action_result.get("refund_id")))
         or (result.outcome == "escalated" and bool(result.handoff and result.handoff.case_id))
@@ -79,7 +69,7 @@ def _score(case: dict[str, Any], result, valid_policies: set[str]) -> dict[str, 
         and result.intent == expected["intent"]
         and tools == expected["tools"]
         and arguments_correct
-        and retrieval_hit is not False
+        and (retrieval_hit is not False)
         and result.escalation == expected["escalation"]
     )
     return {
@@ -97,7 +87,6 @@ def _score(case: dict[str, Any], result, valid_policies: set[str]) -> dict[str, 
         "latency_ms": result.latency_ms, "input_tokens": result.usage.input_tokens,
         "output_tokens": result.usage.output_tokens, "estimated_cost": result.usage.estimated_cost,
     }
-
 
 
 def execute_benchmark(cases: list[dict[str, Any]] | None = None) -> dict[str, Any]:
