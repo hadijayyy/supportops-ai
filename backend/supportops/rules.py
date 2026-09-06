@@ -15,9 +15,10 @@ def _days_since(value: str | None, reference: datetime | None = None) -> int | N
     except (TypeError, ValueError):
         return None
     reference = reference or datetime.now(timezone.utc)
-    if parsed > reference:
+    elapsed = reference - parsed
+    if elapsed.total_seconds() < 0:
         return None
-    return max(0, (reference - parsed).days)
+    return elapsed.days
 
 
 def evaluate_refund(db: Database, order_id: str, reason: str) -> RefundDecision:
@@ -32,20 +33,20 @@ def evaluate_refund(db: Database, order_id: str, reason: str) -> RefundDecision:
     reasons: list[str] = []
     prior = db.one("SELECT id FROM refunds WHERE order_id=? AND status='processed'", (order_id,))
     shipment = db.one("SELECT * FROM shipments WHERE order_id=?", (order_id,))
-    payment = db.one("SELECT amount, status FROM payments WHERE order_id=?", (order_id,))
+    payment = db.one("SELECT status, amount FROM payments WHERE order_id=?", (order_id,))
 
     if not order["verified"]:
         risks.append("customer_unverified")
     if order["fraud_flag"]:
         risks.append("fraud_flag")
-    if not payment or payment["status"] != "captured":
-        risks.append("payment_not_captured")
-    elif float(payment["amount"]) + 0.01 < float(order["total"]):
-        risks.append("payment_amount_mismatch")
     if prior:
         risks.append("already_refunded")
     if order["total"] > settings.auto_refund_threshold:
         risks.append("threshold")
+    if not payment or payment["status"] != "captured":
+        risks.append("payment_not_captured")
+    elif float(payment["amount"]) + 0.01 < float(order["total"]):
+        risks.append("payment_amount_mismatch")
 
     normalized = reason.lower().strip()
     days = _days_since(order["delivered_at"])
@@ -62,7 +63,9 @@ def evaluate_refund(db: Database, order_id: str, reason: str) -> RefundDecision:
     else:
         reasons.append("unsupported_refund_reason")
 
-    blocked = any(flag in risks for flag in ["customer_unverified", "already_refunded", "payment_not_captured", "payment_amount_mismatch"])
+    blocked = any(flag in risks for flag in [
+        "customer_unverified", "already_refunded", "payment_not_captured", "payment_amount_mismatch",
+    ])
     eligible = policy_eligible and not blocked
     if not eligible:
         authorization = "denied"
