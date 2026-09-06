@@ -57,8 +57,8 @@ class ToolRegistry:
             "calculate_refund": (OrderInput, self._calculate_refund),
             "issue_refund": (RefundInput, self._issue_refund),
             "cancel_order": (OrderInput, self._cancel_order),
-            "create_support_ticket": (TicketInput, self._create_ticket),
-            "escalate_to_human": (TicketInput, self._create_ticket),
+            "create_support_ticket": (TicketInput, lambda value: self._create_ticket(value, "create_support_ticket")),
+            "escalate_to_human": (TicketInput, lambda value: self._create_ticket(value, "escalate_to_human")),
         }
 
     def execute(self, name: str, arguments: dict[str, Any]) -> ToolResult:
@@ -140,10 +140,10 @@ class ToolRegistry:
         self.db.execute("UPDATE orders SET status='cancelled' WHERE id=?", (value.order_id,))
         return ToolResult(tool="cancel_order", ok=True, data={"order_id": value.order_id, "status": "cancelled"})
 
-    def _create_ticket(self, value: TicketInput) -> ToolResult:
+    def _create_ticket(self, value: TicketInput, tool_name: str) -> ToolResult:
         ticket_id = f"CASE-{uuid4().hex[:8].upper()}"
         self.db.execute(
             "INSERT INTO tickets VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
             (ticket_id, value.customer_id, value.order_id, "open", value.priority, value.reason, json.dumps(value.evidence), json.dumps(value.actions_attempted), value.recommended_next_step, datetime.now(timezone.utc).isoformat()),
         )
-        return ToolResult(tool="escalate_to_human", ok=True, data={"case_id": ticket_id, "status": "open", "priority": value.priority, "recommended_next_step": value.recommended_next_step})
+        return ToolResult(tool=tool_name, ok=True, data={"case_id": ticket_id, "status": "open", "priority": value.priority, "recommended_next_step": value.recommended_next_step})
