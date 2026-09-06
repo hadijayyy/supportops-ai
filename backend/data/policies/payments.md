@@ -6,4 +6,4 @@ category: payments
 effective_date: 2026-03-12
 ---
 
-Payment dko9ë»h‘éì¶»§q«^u½ÉÑ½ÁÌ¨ˆ°€‰•Ù…±Ì¨‰t(
+Payment disputes require verification against the captured payment record. Chargeback threats, mismatched identities, and suspected fraud must be escalated without issuing a refund.
